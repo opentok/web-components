@@ -3,7 +3,7 @@
   "description": "video-subscribers Web Component to be used with Video API following open-wc recommendations",
   "license": "MIT",
   "author": "video-subscribers",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

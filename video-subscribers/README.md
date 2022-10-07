@@ -22,7 +22,7 @@ npm i @vonage/video-subscribers
 
 ### OR using a CDN
 ```html
-<script type="module" src="https://unpkg.com/@vonage/video-subscribers@latest/dist/index.js?module"></script>
+<script type="module" src="https://unpkg.com/@vonage/video-subscribers@latest/video-subscribers.js?module"></script>
 
 ```
 
@@ -48,6 +48,19 @@ npm i @vonage/video-subscribers
 3. Pass Session and Token into Web Component reference.
 
 >**Note**: This can vary with library / framework (see [examples folder](../examples))
+
+## Make it "Responsive"
+
+By default, the Video Video API adds each subscriber video as a `div` resulting in the video feeds being stacked vertically. To get the video feeds to align horizontally and move to the next row when there is not enough room, apply this CSS to the Web Component:
+
+```css
+video-subscribers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  place-items: center;
+}
+```
+>**Note**: The `px` in `minmax` should match the width you want for each subcriber video.
 
 ## Linting and formatting
 

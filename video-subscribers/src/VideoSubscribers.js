@@ -1,17 +1,14 @@
 import { html, css, LitElement } from 'lit';
 
 export class VideoSubscribers extends LitElement {
-  static styles = css`
-    * {
-      font-size: 200%;
-    }
-  `;
 
-  static properties = {
-    session: {},
-    token: {},
-    width: {type: String},
-    height: {type: String}
+  static get properties() {
+    return {
+      session: {},
+      token: {},
+      width: {type: String},
+      height: {type: String}
+    }
   };
 
   constructor() {

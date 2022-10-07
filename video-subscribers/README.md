@@ -1,6 +1,6 @@
 # \<video-subscribers>
 
-This Web Ccomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation and is meant to be used with the [OpenTok Video SDK](https://tokbox.com/developer/sdks/js/).
+This Web Component follows the [open-wc](https://github.com/open-wc/open-wc) recommendation and is meant to be used with the [OpenTok Video SDK](https://tokbox.com/developer/sdks/js/).
 
 A goal is to simplify the code needed to create a chat room quickly. This Web Component will display all the participants' feeds.
 

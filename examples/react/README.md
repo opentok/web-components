@@ -72,6 +72,10 @@ subscribers.current.token = token;
 
 ### That's it!
 
+We have a more in-depth blogpost covering older versions of React.
+[Using Web Components in a React Application](https://developer.vonage.com/blog/20/10/07/using-web-components-in-a-react-application-dr)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

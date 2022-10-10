@@ -1,0 +1,22 @@
+p {
+  font-family: Lato;
+}
+
+#video-chat-container {
+  display: flex;
+  width: 100%;
+}
+
+#publisher-container {
+  width: 400px;
+}
+
+#subscribers-container {
+  width: 100%;
+}
+
+video-subscribers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  place-items: center;
+}

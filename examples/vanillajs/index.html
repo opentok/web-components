@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Vonage Video API Web Components x Vanilla JS Demo app"
+    />
+
+    <title>Vonage Video API Web Components x Vanilla JS</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Load Vonage Video API fka OpenTok -->
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+
+    <!-- Load Web Components-->
+    <script
+      type="module"
+      src="https://unpkg.com/@vonage/video-publisher@latest/video-publisher.js?module"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@vonage/video-subscribers@latest/video-subscribers.js?module"
+    ></script>
+
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vonage Video API Web Components x Vanilla JS</h1>
+    </header>
+
+    <main id="video-chat-container">
+      <section>
+        <fieldset>
+          <legend>Publisher</legend>
+          <video-publisher width="300px" height="240px"></video-publisher>
+        </fieldset>
+        <button id="video-toggle">toggle Video</button>
+        <button id="audio-toggle">toggle Audio</button>
+      </section>
+      <section id="subscribers-container">
+        <fieldset>
+          <legend>Subscribers</legend>
+          <video-subscribers></video-subscribers>
+        </fieldset>
+      </section>
+    </main>
+  </body>
+</html>

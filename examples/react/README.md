@@ -57,6 +57,27 @@ const subscribers = useRef(null);
 ### 5. Get `apiKey`, `sessionId`, and `token`
 >**Note**: In production applications, they are retrieved from the server [more info](https://tokbox.com/developer/sdks/server/). For this demo, they are hardcoded.
 
+To get the credentials needed to run the demo:
+- [Sign up for](https://www.tokbox.com/account/user/signup) or [Log into](https://tokbox.com/account) your account.
+- In the left-side menu of the [dashboard](https://tokbox.com/account), click `Projects` and select a previous project or create a new one to view the API Key and Secret.
+
+    ![Screenshot of projects dashboard](https://github.com/opentok/web-components/raw/main/examples/react/projects-dashboard-screenshot.jpeg)
+
+    ![Screenshot of project API Key and Secret](https://github.com/opentok/web-components/raw/main/examples/react/project-api-key-secret-screenshot.jpeg)
+
+- Scroll to the bottom of the page to the `Project Tools` section and click the `Create Session ID` button.
+
+    ![Screenshot of Project Tools section](https://github.com/opentok/web-components/raw/main/examples/react/create-session-id-screenshot.jpg)
+
+- Copy and paste the generated `Session ID` into the corresponding input field in the next section.
+
+    ![Screenshot of Project Tools section with generated Session ID pasted in input field](https://github.com/opentok/web-components/raw/main/examples/react/paste-session-id-screenshot.jpg)
+
+- Click `Generate Token` and a token will be created. This is the final credential you need to get the demo running.
+
+    ![Screenshot of Project Tools section with Generated Token](https://github.com/opentok/web-components/raw/main/examples/react/generated-token-screenshot.jpg)
+
+
 ### 6. Create a session
 ```js
 const session = OT.initSession(apiKey, sessionId);

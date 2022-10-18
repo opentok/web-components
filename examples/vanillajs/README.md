@@ -60,9 +60,9 @@ To get the credentials needed to run the demo:
 - [Sign up for](https://www.tokbox.com/account/user/signup) or [Log into](https://tokbox.com/account) your account.
 - In the left-side menu of the [dashboard](https://tokbox.com/account), click `Projects` and select a previous project or create a new one to view the API Key and Secret.
 
-    ![Screenshot of projects dashboard](https://github.com/opentok/web-components/raw/main/examples/vanillajs/projects-dashboard-screenshot.jpg)
+    ![Screenshot of projects dashboard](https://github.com/opentok/web-components/raw/main/examples/vanillajs/projects-dashboard-screenshot.jpeg)
 
-    ![Screenshot of project API Key and Secret](https://github.com/opentok/web-components/raw/main/examples/vanillajs/project-api-key-secret-screenshot.jpg)
+    ![Screenshot of project API Key and Secret](https://github.com/opentok/web-components/raw/main/examples/vanillajs/project-api-key-secret-screenshot.jpeg)
 
 - Scroll to the bottom of the page to the `Project Tools` section and click the `Create Session ID` button.
 

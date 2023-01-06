@@ -1,6 +1,6 @@
 {
-  "name": "screen-share",
-  "description": "Webcomponent screen-share following open-wc recommendations",
+  "name": "@vonage/screen-share",
+  "description": "screen-share Web Component to be used with Video API following open-wc recommendations",
   "license": "MIT",
   "author": "screen-share",
   "version": "0.0.0",

@@ -18,8 +18,8 @@ export class ScreenShare extends LitElement {
       token: {},
       width: {type: String},
       height: {type: String},
-      buttonStartText: { type: String },
-      buttonStopText: { type: String },
+      buttonStartText: { type: String, attribute: 'start-text' },
+      buttonStopText: { type: String, attribute: 'stop-text' },
       isSharing: { type: Boolean }
     }
   };

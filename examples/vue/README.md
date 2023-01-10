@@ -10,7 +10,7 @@ Deployed application:
 
 - `<video-publisher>` : Initializes a publisher and publishes to the session. [more info](https://github.com/opentok/web-components/tree/main/video-publisher)
 - `<video-subscribers>` : Subscribes and displays other streams in the session. [more info](https://github.com/opentok/web-components/tree/main/video-subscribers)
-
+- `<screen-share>` : Adds ability to allow user to share their screen. [more info](https://github.com/opentok/web-components/tree/main/screen-share)
 
 ## How to use
 
@@ -19,7 +19,7 @@ so that Vue knows you will be using Web Components. This may vary depending on h
 For this demo, compilation is done in the browser so, in your main.js, put this piece of code:
 ```js
 app.config.compilerOptions.isCustomElement = (tag) => {
-  return tag.startsWith('video-');
+  return tag.includes('-');
 };
 ```
 
@@ -35,18 +35,20 @@ install to your project
 ```bash
 npm i @vonage/video-publisher
 npm i @vonage/video-subscribers
+npm i @vonage/screen-share
 ```
 then import into your `*.vue` project file
 ```js
 import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
+import '@vonage/screen-share/screen-share.js';
 ```
 
 OR use a CDN and place in your index.html file
 ```html
 <script type="module" src="https://unpkg.com/@vonage/video-publisher@latest/video-publisher.js?module"></script>
 <script type="module" src="https://unpkg.com/@vonage/video-subscribers@latest/video-subscribers.js?module"></script>
-
+<script type="module" src="https://unpkg.com/@vonage/screen-share@latest/screen-share.js?module"></script>
 ```
 
 ### 4. Place the Web Components
@@ -55,6 +57,7 @@ for ex:
 ```html
 <video-publisher width="360px" height="240px" ref="publisher"></video-publisher>
 <video-subscribers width="360px" height="240px" ref="subscribers"></video-subscribers>
+<screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref="screenshare"></screen-share>
 ```
 
 ### 5. Get `apiKey`, `sessionId`, and `token`
@@ -91,6 +94,8 @@ this.$refs.publisher.session = session;
 this.$refs.publisher.token = token;
 this.$refs.subscribers.session = session;
 this.$refs.subscribers.token = token;
+this.$refs.screenshare.session = session;
+this.$refs.screenshare.token = token;
 ```
 
 ### That's it!

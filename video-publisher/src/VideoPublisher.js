@@ -25,7 +25,7 @@ export class VideoPublisher extends LitElement {
       this.session.on({
       // This function runs when session.connect() asynchronously completes
         sessionConnected: () => {
-          // Publish the publisher we initialzed earlier (this will trigger 'streamCreated' on other clients)
+          // Publish the publisher we initialized earlier (this will trigger 'streamCreated' on other clients)
           this.session.publish(this.publisher, (error) => {
             if(error){
               console.error("session error: ", error.message);
@@ -49,7 +49,7 @@ export class VideoPublisher extends LitElement {
         if(error){
           console.error("error: ", error)
         }
-      });  
+      });
     } else {
       console.error("Please load Vonage Video library.");
     }
@@ -75,7 +75,7 @@ export class VideoPublisher extends LitElement {
       this.publisher.publishVideo(true);
     }
   }
-  
+
   render() {
     return html`
       <slot></slot>

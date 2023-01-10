@@ -47,6 +47,13 @@ video-subscribers {
   place-items: center;
 }
 
+screen-share::part(button) {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

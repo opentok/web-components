@@ -10,7 +10,7 @@ Deployed application:
 
 - `<video-publisher>` : Initializes a publisher and publishes to the session. [more info](https://github.com/opentok/web-components/tree/main/video-publisher)
 - `<video-subscribers>` : Subscribes and displays other streams in the session. [more info](https://github.com/opentok/web-components/tree/main/video-subscribers)
-
+- `<screen-share>` : Adds ability to allow user to share their screen. [more info](https://github.com/opentok/web-components/tree/main/screen-share)
 
 ## How to use
 
@@ -26,18 +26,20 @@ install to your project
 ```bash
 npm i @vonage/video-publisher
 npm i @vonage/video-subscribers
+npm i @vonage/screen-share
 ```
 then import into your project
 ```js
 import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
+import '@vonage/screen-share/screen-share.js';
 ```
 
 OR use a CDN and place in your index.html file
 ```html
 <script type="module" src="https://unpkg.com/@vonage/video-publisher@latest/video-publisher.js?module"></script>
 <script type="module" src="https://unpkg.com/@vonage/video-subscribers@latest/video-subscribers.js?module"></script>
-
+<script type="module" src="https://unpkg.com/@vonage/screen-share@latest/screen-share.js?module"></script>
 ```
 
 ### 3. Place the Web Components
@@ -45,12 +47,14 @@ where you want them to show up in your app
 ```html
 <video-publisher width="360px" height="240px" #publisher></video-publisher>
 <video-subscribers width="360px" height="240px" #subscribers></video-subscribers>
+<screen-share start-text="start" stop-text="stop" width="300px" height="240px"></screen-share>
 ```
 
 ### 4. Get references to the Web Components
 ```js
 const videoPublisherEl = document.querySelector('video-publisher');
 const videoSubscribersEl = document.querySelector('video-subscribers');
+const screenShareEl = document.querySelector('screen-share');
 ```
 
 ### 5. Get `apiKey`, `sessionId`, and `token`
@@ -87,6 +91,8 @@ videoPublisherEl.session = session;
 videoPublisherEl.token = token;
 videoSubscribersEl.session = session;
 videoSubscribersEl.token = token;
+screenShareEl.session = session;
+screenShareEl.token = token;
 ```
 
 ### That's it!

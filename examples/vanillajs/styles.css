@@ -63,3 +63,10 @@ video-subscribers {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   place-items: center;
 }
+
+screen-share::part(button) {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}

@@ -1,5 +1,6 @@
 const videoPublisherEl = document.querySelector('video-publisher');
 const videoSubscribersEl = document.querySelector('video-subscribers');
+const screenShareEl = document.querySelector('screen-share');
 const audioToggle = document.querySelector('#audio-toggle');
 const videoToggle = document.querySelector('#video-toggle');
 
@@ -16,6 +17,8 @@ videoPublisherEl.session = session;
 videoPublisherEl.token = token;
 videoSubscribersEl.session = session;
 videoSubscribersEl.token = token;
+screenShareEl.session = session;
+screenShareEl.token = token;
 
 audioToggle.addEventListener('click', () => {
   console.log('audioToggle!');

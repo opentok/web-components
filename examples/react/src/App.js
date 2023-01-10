@@ -4,11 +4,13 @@ import './App.css';
 
 import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
+import '@vonage/screen-share/screen-share.js';
 
 function App() {
   // Get references to Web Components
   const publisher = useRef(null);
   const subscribers = useRef(null);
+  const screenshare = useRef(null);
 
   // These values normally come from the backend in a production application, but for this demo, they are hardcoded
   const apiKey = 'YOUR_API_KEY';
@@ -34,6 +36,8 @@ function App() {
     publisher.current.token = token;
     subscribers.current.session = session;
     subscribers.current.token = token;
+    screenshare.current.session = session;
+    screenshare.current.token = token;
 
   });
 
@@ -54,6 +58,8 @@ function App() {
           <button onClick={toggleAudio}>
               toggle Audio
           </button>
+          <br/><br/>
+          <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share>
         </section>
         <section className="App-section-subscribers">
           <fieldset>

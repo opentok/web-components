@@ -13,6 +13,8 @@
         </fieldset>
         <button type="button" @click="toggleVideo">toggle Video</button>
         <button type="button" @click="toggleAudio">toggle Audio</button>
+        <br/><br/>
+        <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref="screenshare"></screen-share>
       </section>
       <section id="subscribers-container">
         <fieldset>
@@ -31,6 +33,7 @@
 <script>
 import '@vonage/video-publisher/video-publisher.js';
 import '@vonage/video-subscribers/video-subscribers.js';
+import '@vonage/screen-share/screen-share.js';
 
 export default {
   name: 'HelloWorld',
@@ -55,6 +58,8 @@ export default {
           this.$refs.publisher.token = token;
           this.$refs.subscribers.session = session;
           this.$refs.subscribers.token = token;
+          this.$refs.screenshare.session = session;
+          this.$refs.screenshare.token = token;
         },
         (error) => {
           console.error('error getting credentials: ', error);
@@ -106,5 +111,12 @@ video-subscribers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   place-items: center;
+}
+
+screen-share::part(button) {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
 }
 </style>

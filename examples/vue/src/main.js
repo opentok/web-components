@@ -4,7 +4,7 @@ import App from './App.vue';
 const app = createApp(App);
 
 app.config.compilerOptions.isCustomElement = (tag) => {
-  return tag.startsWith('video-');
+  return tag.includes('-');
 };
 
 app.mount('#app');

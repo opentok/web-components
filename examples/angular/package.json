@@ -21,7 +21,7 @@
     "@angular/router": "^14.0.0",
     "@vonage/video-publisher": "^0.0.3",
     "@vonage/video-subscribers": "^0.0.3",
-    "@vonage/screen-share": "^0.0.1",
+    "@vonage/screen-share": "^0.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

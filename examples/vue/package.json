@@ -11,7 +11,7 @@
   "dependencies": {
     "@vonage/video-publisher": "^0.0.3",
     "@vonage/video-subscribers": "^0.0.3",
-    "@vonage/screen-share": "^0.0.1",
+    "@vonage/screen-share": "^0.0.2",
     "vue": "^3.2.26"
   },
   "devDependencies": {

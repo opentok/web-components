@@ -59,7 +59,7 @@ for ex:
 ```html
 <video-publisher width="360px" height="240px" #publisher></video-publisher>
 <video-subscribers width="360px" height="240px" #subscribers></video-subscribers>
-<screen-share start-text="start" stop-text="stop" width="300px" height="240px"></screen-share>
+<screen-share start-text="start" stop-text="stop" width="300px" height="240px" #screenshare></screen-share>
 ```
 
 ### 5. Get references to the Web Components using `ViewChild` and `ElementRef`

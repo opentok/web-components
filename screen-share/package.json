@@ -1,9 +1,11 @@
 {
   "name": "@vonage/screen-share",
   "description": "screen-share Web Component to be used with Video API following open-wc recommendations",
+  "homepage": "https://github.com/opentok/web-components/tree/main/screen-share#readme",
+  "repository": "https://github.com/opentok/web-components/tree/main/screen-share",
   "license": "MIT",
-  "author": "screen-share",
-  "version": "0.0.1",
+  "author": "Vonage",
+  "version": "0.0.2",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

@@ -1,9 +1,11 @@
 {
   "name": "@vonage/video-subscribers",
   "description": "video-subscribers Web Component to be used with Video API following open-wc recommendations",
+  "homepage": "https://github.com/opentok/web-components/tree/main/video-subscribers#readme",
+  "repository": "https://github.com/opentok/web-components/tree/main/video-subscribers",
   "license": "MIT",
-  "author": "video-subscribers",
-  "version": "0.0.3",
+  "author": "Vonage",
+  "version": "0.0.4",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

@@ -1,9 +1,11 @@
 {
   "name": "@vonage/video-publisher",
   "description": "video-publisher Web Component to be used with Video API following open-wc recommendations",
+  "homepage": "https://github.com/opentok/web-components/tree/main/video-publisher#readme",
+  "repository": "https://github.com/opentok/web-components/tree/main/video-publisher",
   "license": "MIT",
-  "author": "video-publisher",
-  "version": "0.0.3",
+  "author": "Vonage",
+  "version": "0.0.4",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

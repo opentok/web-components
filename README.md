@@ -12,6 +12,7 @@ Please see each Web Component for individual installation instructions.
 
 * [video-publisher](video-publisher)
 * [video-subscribers](video-subscribers)
+* [video-subscriber](video-subscriber)
 * [screen-share](screen-share)
 * [inputs-select](inputs-select)
 

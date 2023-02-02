@@ -31,6 +31,11 @@ place into your index.html
 <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
 ```
 
+OR if you install the library using `npm install --save @opentok/client`
+```html
+<script src="node_modules/@opentok/client/dist/js/opentok.min.js"></script>
+```
+
 ### 3. Get the Web Components
 
 install to your project
@@ -57,9 +62,9 @@ OR use a CDN and place in your index.html file
 where you want them to show up in your app
 for ex:
 ```html
-<video-publisher width="360px" height="240px" #publisher></video-publisher>
-<video-subscribers width="360px" height="240px" #subscribers></video-subscribers>
-<screen-share start-text="start" stop-text="stop" width="300px" height="240px" #screenshare></screen-share>
+<video-publisher width="360px" height="240px" #publisher [session]="session" [token]="token"></video-publisher>
+<video-subscribers width="360px" height="240px" #subscribers [session]="session" [token]="token"></video-subscribers>
+<screen-share start-text="start" stop-text="stop" width="300px" height="240px" #screenshare [session]="session" [token]="token"></screen-share>
 ```
 
 ### 5. Get references to the Web Components using `ViewChild` and `ElementRef`
@@ -94,17 +99,7 @@ To get the credentials needed to run the demo:
 
 ### 7. Create a session
 ```js
-const session = OT.initSession(apiKey, sessionId);
-```
-
-### 8. Set the session and token for Web Components
-```js
-this.publisherComponent.nativeElement.session = session;
-this.publisherComponent.nativeElement.token = token;
-this.subscribersComponent.nativeElement.session = session;
-this.subscribersComponent.nativeElement.token = token;
-this.screenshareComponent.nativeElement.session = session;
-this.screenshareComponent.nativeElement.token = token;
+this.session = this.OT.initSession(this.apiKey, this.sessionId);
 ```
 
 ### That's it!

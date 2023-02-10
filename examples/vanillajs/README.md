@@ -4,7 +4,7 @@ This demo was created with [Stackblitz's Static Starter App](https://stackblitz.
 
 Deployed application:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/opentok-wc-vanillajs)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/opentok-wc-vanillajs)
 
 ## The Web Components
 

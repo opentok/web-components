@@ -4,7 +4,9 @@ This demo was created with [Stackblitz's Static Starter App](https://stackblitz.
 
 Deployed application:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/opentok-wc-vanillajs)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/opentok/web-components/tree/main/examples/vanillajs)
+
+> Note: There is a devDependency in the project that is only neccessary to run the demo on StackBlitz. If you download the code, you should be able to just open the index.html file in a browser to see it working.
 
 ## The Web Components
 

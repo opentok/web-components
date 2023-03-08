@@ -6,7 +6,7 @@ Deployed application:
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/opentok/web-components/tree/main/examples/vanillajs)
 
-> Note: There is a devDependency in the project that is only neccessary to run the demo on StackBlitz. If you download the code, you should be able to just open the index.html file in a browser to see it working.
+> Note: There is a devDependency in the project that is only necessary to run the demo on StackBlitz. If you download the code, you should be able to just open the index.html file in a browser to see it working.
 
 ## The Web Components
 

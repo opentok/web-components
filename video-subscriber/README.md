@@ -29,14 +29,37 @@ npm i @vonage/video-subscriber
 
 ### Attributes that can be used (optional):
 
-- `width` : set the width of each video in video subscribers. Can be in pixels (ex: "360px") or a percentage (ex: "75%"). Default is "100%".
-- `height` : set the height of each video in video subscribers. Can be in pixels (ex: "240px") or a percentage (ex: "55%"). Default is "100%".
+- `properties` : (Object) the properties used to initialize the publisher. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher).
+
+### Methods that can be called
+
+- `subscribeToAudio(state)` : toggle subscribing to audio. State is a boolean.
+- `subscribeToVideo(state)` : toggle subscribing to video. State is a boolean.
 
 ### Custom Events to listen for
 
 - `error` : contains details if there was an error subscribing to the stream
 - `subscribed` : contains details of subscriber if successful [Subscriber Object](https://tokbox.com/developer/sdks/js/reference/Subscriber.html)
 - `unsubscribed` : contains details of subscriber unsubscribed [Subscriber Object](https://tokbox.com/developer/sdks/js/reference/Subscriber.html)
+
+## Styling
+
+The Web Component uses the [CSS pseudo-element `::part`](https://developer.mozilla.org/en-US/docs/Web/CSS/::part) for styling. So you can style it the same way you would style a regular button element. Here's an example:
+
+This is the HTML structure of the Web Component:
+
+```html
+<div part="container" id=${this.stream.streamId} class="OTSubscriberContainer">
+  <slot></slot>
+</div>
+```
+
+Here is how to apply CSS to a part:
+```css
+video-subscriber::part(container) {
+  aspect-ratio: 16 / 9;
+}
+```
 
 ## Getting it to work
 
@@ -51,15 +74,14 @@ const videoSubscriberContainer = document.querySelector("#video-subscriber-conta
 session.on("streamCreated", function(event) {
   const videoSubscriberEl = document.createElement("video-subscriber");
   videoSubscriberEl.setAttribute("id", `${event.stream.streamId}`);
+  videoSubscriberEl.properties = {width: "100%", height: "100%"};
   videoSubscriberEl.session = session;
   videoSubscriberEl.stream = event.stream;
   videoSubscriberContainer.appendChild(videoSubscriberEl);
 });
-
 ```
 
 >**Note**: This can vary with library / framework (see [examples folder](../examples))
-
 
 ## Linting and formatting
 

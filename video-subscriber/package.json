@@ -5,7 +5,7 @@
   "repository": "https://github.com/opentok/web-components/tree/main/video-subscriber",
   "license": "MIT",
   "author": "Vonage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

@@ -48,7 +48,7 @@ npm i @vonage/video-publisher
 - `startPublish()` : start publishing to session
 - `toggleAudio()` : start/stop publishing audio
 - `toggleVideo()` : start/stop publishing video
-- `cycleVideo()` : start/stop publishing video
+- `cycleVideo()` : switches the video input source
 
 ### Custom Event to listen for 
 

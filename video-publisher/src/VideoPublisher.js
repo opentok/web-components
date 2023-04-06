@@ -7,8 +7,8 @@ export class VideoPublisher extends LitElement {
       publisher: {},
       session: {},
       token: {},
-      width: {type: String},
-      height: {type: String}
+      properties: { type: Object },
+      autoPublish: { type: String, attribute: 'auto-publish' }
     }
   };
 
@@ -16,8 +16,47 @@ export class VideoPublisher extends LitElement {
     super();
     this.session = {};
     this.token = "";
-    this.width = "100%";
-    this.height = "100%";
+    this.properties = {};
+    this.autoPublish = "true";
+  }
+
+  startPublish() {
+    this.publisher = OT.initPublisher(document.querySelector('video-publisher'), this.properties, (error) => {
+      if(error){
+        console.error("error creating publisher: ", error)
+        const options = {
+          detail: {
+            error,
+          },
+          bubbles: true,
+          composed: true,
+        };
+        this.dispatchEvent(new CustomEvent('error', options));
+      } else {
+        this.session.publish(this.publisher, (err) => {
+          if(err){
+            console.error("session publish error: ", err.message);
+            const options = {
+              detail: {
+                error: err,
+              },
+              bubbles: true,
+              composed: true,
+            };
+            this.dispatchEvent(new CustomEvent('error', options));
+          } else {
+            const options = {
+              detail: {
+                publisher: this.publisher,
+              },
+              bubbles: true,
+              composed: true,
+            };
+            this.dispatchEvent(new CustomEvent('published', options));
+          }
+        });
+      }
+    });
   }
 
   updated(changedProperties) {
@@ -25,12 +64,9 @@ export class VideoPublisher extends LitElement {
       this.session.on({
       // This function runs when session.connect() asynchronously completes
         sessionConnected: () => {
-          // Publish the publisher we initialized earlier (this will trigger 'streamCreated' on other clients)
-          this.session.publish(this.publisher, (error) => {
-            if(error){
-              console.error("session error: ", error.message);
-            }
-          });
+          if (this.autoPublish === "true"){
+            this.startPublish();
+          }
         }
       });
       this.session.connect(this.token);
@@ -39,18 +75,7 @@ export class VideoPublisher extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    const publisherOptions = {
-      insertMode: 'append',
-      width: this.width,
-      height: this.height
-    };
-    if (window.OT){
-      this.publisher = OT.initPublisher(document.querySelector('video-publisher'),publisherOptions, (error) => {
-        if(error){
-          console.error("error: ", error)
-        }
-      });
-    } else {
+    if (!window.OT){
       console.error("Please load Vonage Video library.");
     }
   }
@@ -74,6 +99,10 @@ export class VideoPublisher extends LitElement {
     } else {
       this.publisher.publishVideo(true);
     }
+  }
+
+  cycleVideo() {
+    this.publisher.cycleVideo();
   }
 
   render() {

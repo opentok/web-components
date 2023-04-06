@@ -5,7 +5,7 @@
   "repository": "https://github.com/opentok/web-components/tree/main/video-publisher",
   "license": "MIT",
   "author": "Vonage",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

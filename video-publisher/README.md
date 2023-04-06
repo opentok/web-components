@@ -36,17 +36,24 @@ npm i @vonage/video-publisher
 
 ### Attributes that can be used (optional):
 
-- `width` : set the width of the video publisher. Can be in pixels (ex: "360px") or a percentage (ex: "75%"). Default is "100%".
-- `height` : set the height of the video publisher. Can be in pixels (ex: "240px") or a percentage (ex: "55%"). Default is "100%".
+- `auto-publish` : (String) whether to auto publish video when connected to session. Default is "true". For example, you can set to false and use the [<inputs-select>](https://github.com/opentok/web-components/tree/main/inputs-select) component to set audio/video sources.
+- `properties` : (Object) the properties used to initialize the publisher. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher).
 
 ```html
-<video-publisher width="360px" height="55%"></video-publisher>
+<video-publisher auto-publish="false"></video-publisher>
 ```
 
 ### Methods that can be called
 
+- `startPublish()` : start publishing to session
 - `toggleAudio()` : start/stop publishing audio
 - `toggleVideo()` : start/stop publishing video
+- `cycleVideo()` : switches the video input source
+
+### Custom Event to listen for 
+
+- `published` : event detail contains the [publisher Object](https://tokbox.com/developer/sdks/js/reference/Publisher.html)
+- `error` : event detail contains any error that happened.
 
 ## Getting it to work
 

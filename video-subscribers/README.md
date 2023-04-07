@@ -38,10 +38,6 @@ npm i @vonage/video-subscribers
 
 - `properties` : (Object) the properties used pn each video in video subscribers. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher).
 
-```html
-<video-subscribers></video-subscribers>
-```
-
 ## Getting it to work
 
 1. Get a reference to the Web Component.

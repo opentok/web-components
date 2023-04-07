@@ -29,7 +29,7 @@ npm i @vonage/video-subscriber
 
 ### Attributes that can be used (optional):
 
-- `properties` : (Object) the properties used to initialize the publisher. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher).
+- `properties` : (Object) the properties used to initialize the subscriber. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe).
 
 ### Methods that can be called
 

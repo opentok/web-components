@@ -36,7 +36,7 @@ npm i @vonage/video-subscribers
 
 ### Attributes that can be used (optional):
 
-- `properties` : (Object) the properties used pn each video in video subscribers. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher).
+- `properties` : (Object) the properties used on each video in video subscribers. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe).
 
 ## Getting it to work
 

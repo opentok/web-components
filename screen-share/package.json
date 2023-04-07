@@ -5,7 +5,7 @@
   "repository": "https://github.com/opentok/web-components/tree/main/screen-share",
   "license": "MIT",
   "author": "Vonage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "module": "index.js",
   "scripts": {

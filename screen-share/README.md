@@ -36,13 +36,12 @@ npm i @vonage/screen-share
 
 ### Attributes that can be used (optional):
 
-- `width` : set the width of the screen share preview. Can be in pixels (ex: "360px") or a percentage (ex: "75%"). Default is "100%".
-- `height` : set the height of the screen share preview. Can be in pixels (ex: "240px") or a percentage (ex: "55%"). Default is "100%".
+- `properties` : (Object) the properties used to publish the screen share. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher).
 - `start-text` : set the text of the button to begin screen sharing. Default is "start screenshare".
 - `stop-text` : set the text of the button to end screen sharing. Default is "stop screenshare".
 
 ```html
-<screen-share start-text="start" stop-text="stop" width="300px" height="240px"></screen-share>
+<screen-share start-text="start" stop-text="stop"></screen-share>
 ```
 
 ## Styling

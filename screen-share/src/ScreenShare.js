@@ -16,8 +16,7 @@ export class ScreenShare extends LitElement {
       publisher: {},
       session: {},
       token: {},
-      width: {type: String},
-      height: {type: String},
+      properties: { type: Object },
       buttonStartText: { type: String, attribute: 'start-text' },
       buttonStopText: { type: String, attribute: 'stop-text' },
       isSharing: { type: Boolean }
@@ -28,8 +27,7 @@ export class ScreenShare extends LitElement {
     super();
     this.session = {};
     this.token = "";
-    this.width = "100%";
-    this.height = "100%";
+    this.properties = {};
     this.buttonStartText = "start screenshare";
     this.buttonStopText = "stop screenshare";
     this.isSharing = false;
@@ -51,14 +49,9 @@ export class ScreenShare extends LitElement {
   }
 
   async __handleStartScreenshare() {
-    const publisherOptions = {
-      insertMode: 'append',
-      width: this.width,
-      height: this.height,
-      videoSource: 'screen'
-    };
+    this.properties = { ...this.properties, videoSource: 'screen', insertMode: 'append'};
     if (window.OT){
-      this.publisher = OT.initPublisher(document.querySelector('screen-share'),publisherOptions, (error) => {
+      this.publisher = OT.initPublisher(document.querySelector('screen-share'), this.properties, (error) => {
         if(error){
           console.error("error: ", error)
         } else {

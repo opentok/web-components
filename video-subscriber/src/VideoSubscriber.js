@@ -5,8 +5,7 @@ export class VideoSubscriber extends LitElement {
     return {
       session: { type: Object },
       stream: { type: Object },
-      width: { type: String },
-      height: { type: String },
+      properties: { type: Object },
     };
   }
 
@@ -14,22 +13,16 @@ export class VideoSubscriber extends LitElement {
     super();
     this.session = {};
     this.stream = null;
-    this.width = '360px';
-    this.height = '240px';
+    this.properties = {};
     this.subscriber = {};
   }
 
   firstUpdated() {
     if (this.stream) {
-      const subscriberOptions = {
-        insertMode: 'append',
-        width: this.width,
-        height: this.height,
-      };
       this.subscriber = this.session.subscribe(
         this.stream,
         document.getElementById(this.stream.streamId),
-        subscriberOptions,
+        this.properties,
         error => {
           if (error) {
             const options = {
@@ -76,9 +69,21 @@ export class VideoSubscriber extends LitElement {
     this.dispatchEvent(new CustomEvent('unsubscribed', options));
   }
 
+  subscribeToAudio(state) {
+    this.subscriber.subscribeToAudio(state);
+  }
+
+  subscribeToVideo(state) {
+    this.subscriber.subscribeToVideo(state);
+  }
+
   render() {
     return this.stream
-      ? html`<div id=${this.stream.streamId} class="OTSubscriberContainer">
+      ? html`<div
+          part="container"
+          id=${this.stream.streamId}
+          class="OTSubscriberContainer"
+        >
           <slot></slot>
         </div>`
       : html`Loading`;

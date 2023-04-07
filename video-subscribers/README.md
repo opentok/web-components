@@ -36,12 +36,7 @@ npm i @vonage/video-subscribers
 
 ### Attributes that can be used (optional):
 
-- `width` : set the width of each video in video subscribers. Can be in pixels (ex: "360px") or a percentage (ex: "75%"). Default is "100%".
-- `height` : set the height of each video in video subscribers. Can be in pixels (ex: "240px") or a percentage (ex: "55%"). Default is "100%".
-
-```html
-<video-subscribers width="360px" height="55%"></video-subscribers>
-```
+- `properties` : (Object) the properties used pn each video in video subscribers. Find the full list in the [documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher).
 
 ## Getting it to work
 
@@ -53,7 +48,7 @@ npm i @vonage/video-subscribers
 
 ## Make it "Responsive"
 
-By default, the Video Video API adds each subscriber video as a `div` resulting in the video feeds being stacked vertically. To get the video feeds to align horizontally and move to the next row when there is not enough room, apply this CSS to the Web Component:
+By default, the Vonage Video API adds each subscriber video as a `div` resulting in the video feeds being stacked vertically. To get the video feeds to align horizontally and move to the next row when there is not enough room, apply this CSS to the Web Component:
 
 ```css
 video-subscribers {

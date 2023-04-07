@@ -22,6 +22,7 @@ export class VideoSubscribers extends LitElement {
       this.session.on({
         // This function runs when another client publishes a stream (eg. session.publish())
         streamCreated: (event) => {
+          this.properties = { ...this.properties, insertMode: 'append'};
           this.session.subscribe(event.stream, document.querySelector('video-subscribers'), this.properties, (error) => {
             if(error){
               console.error("error subscribing to session: ", error);

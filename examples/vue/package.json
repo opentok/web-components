@@ -9,9 +9,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@vonage/video-publisher": "^0.0.3",
-    "@vonage/video-subscribers": "^0.0.3",
-    "@vonage/screen-share": "^0.0.2",
+    "@vonage/video-publisher": "*",
+    "@vonage/video-subscribers": "*",
+    "@vonage/screen-share": "*",
     "vue": "^3.2.26"
   },
   "devDependencies": {

@@ -5,11 +5,7 @@
       <section id="publisher-container">
         <fieldset>
           <legend>Publisher</legend>
-          <video-publisher
-            width="360px"
-            height="240px"
-            ref="publisher"
-          ></video-publisher>
+          <video-publisher ref="publisher"></video-publisher>
         </fieldset>
         <button type="button" @click="toggleVideo">toggle Video</button>
         <button type="button" @click="toggleAudio">toggle Audio</button>
@@ -19,11 +15,7 @@
       <section id="subscribers-container">
         <fieldset>
           <legend>Subscribers</legend>
-          <video-subscribers
-            width="360px"
-            height="240px"
-            ref="subscribers"
-          ></video-subscribers>
+          <video-subscribers ref="subscribers"></video-subscribers>
         </fieldset>
       </section>
     </div>
@@ -53,9 +45,16 @@ export default {
         (result) => {
           // Initialize an OpenTok Session object
           const session = OT.initSession(apiKey, sessionId);
-          // Set session and token for Web Components
+          // Set session and token (and optionally properties) for Web Components
           this.$refs.publisher.session = session;
           this.$refs.publisher.token = token;
+          this.$refs.publisher.properties = {
+            fitMode: 'cover',
+            height: '100%',
+            resolution: '1920x1080',
+            videoContentHint: 'detail',
+            width: '100%',
+          };
           this.$refs.subscribers.session = session;
           this.$refs.subscribers.token = token;
           this.$refs.screenshare.session = session;
@@ -107,6 +106,11 @@ a {
   width: 100%;
 }
 
+video-publisher {
+  display: block;
+  aspect-ratio: 16/9;
+}
+  
 video-subscribers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

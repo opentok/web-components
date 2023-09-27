@@ -46,8 +46,8 @@ OR use a CDN and place in your index.html file
 where you want them to show up in your app
 for ex:
 ```html
-<video-publisher width="360px" height="240px" ref={publisher}></video-publisher>
-<video-subscribers width="360px" height="240px" ref={subscribers}></video-subscribers>
+<video-publisher ref={publisher}></video-publisher>
+<video-subscribers ref={subscribers}></video-subscribers>
 <screen-share start-text="start" stop-text="stop" width="300px" height="240px" ref={screenshare}></screen-share>
 ```
 
@@ -96,6 +96,15 @@ subscribers.current.token = token;
 screenshare.current.session = session;
 screenshare.current.token = token;
 ```
+### 8. (Optional) Set properties attribute for Web Components (if available)
+```js
+publisher.current.properties = { ... };
+```
+see full list: [https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher)
+```js
+subscribers.current.properties = { ... };
+```
+see full list: [https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe](https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe)
 
 ### That's it!
 

@@ -47,8 +47,8 @@ OR use a CDN and place in your index.html file
 ### 3. Place the Web Components
 where you want them to show up in your app
 ```html
-<video-publisher width="360px" height="240px" #publisher></video-publisher>
-<video-subscribers width="360px" height="240px" #subscribers></video-subscribers>
+<video-publisher></video-publisher>
+<video-subscribers></video-subscribers>
 <screen-share start-text="start" stop-text="stop" width="300px" height="240px"></screen-share>
 ```
 

@@ -24,6 +24,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   // @ts-ignore
   OT = window.OT;
   session = {};
+  pubProperties = {
+    fitMode: 'cover',
+    height: '100%',
+    resolution: '1920x1080',
+    videoContentHint: 'detail',
+    width: '100%',
+  };
 
   @ViewChild('publisher') publisherComponent: ElementRef;
   @ViewChild('subscribers') subscribersComponent: ElementRef;

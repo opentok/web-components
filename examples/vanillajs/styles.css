@@ -60,6 +60,7 @@ h1 {
 
 video-publisher {
   display: block;
+  aspect-ratio: 16/9;
 }
 
 video-subscribers {

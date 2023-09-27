@@ -96,6 +96,7 @@ subscribers.current.token = token;
 screenshare.current.session = session;
 screenshare.current.token = token;
 ```
+
 ### 8. (Optional) Set properties attribute for Web Components (if available)
 ```js
 publisher.current.properties = { ... };

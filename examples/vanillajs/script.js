@@ -12,9 +12,16 @@ const token = 'YOUR_TOKEN';
 // Initialize an OpenTok Session object
 const session = OT.initSession(apiKey, sessionId);
 
-// Set session and token for Web Components
+// Set session and token (and optionally properties) for Web Components
 videoPublisherEl.session = session;
 videoPublisherEl.token = token;
+videoPublisherEl.properties = {
+      fitMode: 'cover',
+      height: '100%',
+      resolution: '1920x1080',
+      videoContentHint: 'detail',
+      width: '100%',
+    };
 videoSubscribersEl.session = session;
 videoSubscribersEl.token = token;
 screenShareEl.session = session;

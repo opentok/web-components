@@ -100,11 +100,11 @@ screenshare.current.token = token;
 ```js
 publisher.current.properties = { ... };
 ```
-see full list: [https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher)
+(see [full list](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher))
 ```js
 subscribers.current.properties = { ... };
 ```
-see full list: [https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe](https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe)
+(see [full list](https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe))
 
 ### That's it!
 

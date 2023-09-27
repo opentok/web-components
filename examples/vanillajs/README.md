@@ -97,4 +97,14 @@ screenShareEl.session = session;
 screenShareEl.token = token;
 ```
 
+### 8. (Optional) Set properties attribute for Web Components (if available)
+```js
+videoPublisherEl.properties = { ... };
+```
+(see [full list](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher))
+```js
+videoSubscribersEl.properties = { ... };
+```
+(see [full list](https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe))
+
 ### That's it!

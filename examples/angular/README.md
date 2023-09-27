@@ -62,8 +62,8 @@ OR use a CDN and place in your index.html file
 where you want them to show up in your app
 for ex:
 ```html
-<video-publisher width="360px" height="240px" #publisher [session]="session" [token]="token"></video-publisher>
-<video-subscribers width="360px" height="240px" #subscribers [session]="session" [token]="token"></video-subscribers>
+<video-publisher #publisher [session]="session" [token]="token" [properties]="pubProperties"></video-publisher>
+<video-subscribers #subscribers [session]="session" [token]="token" [properties]="subsProperties"></video-subscribers>
 <screen-share start-text="start" stop-text="stop" width="300px" height="240px" #screenshare [session]="session" [token]="token"></screen-share>
 ```
 
@@ -101,6 +101,16 @@ To get the credentials needed to run the demo:
 ```js
 this.session = this.OT.initSession(this.apiKey, this.sessionId);
 ```
+
+### 8. (Optional) Set properties attribute for Web Components (if available)
+```js
+pubProperties = { ... };
+```
+(see [full list](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher))
+```js
+subsProperties = { ... };
+```
+(see [full list](https://tokbox.com/developer/sdks/js/reference/Session.html#subscribe))
 
 ### That's it!
 

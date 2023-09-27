@@ -4,7 +4,7 @@
   <section id="publisher-container">
     <fieldset>
       <legend>Publisher</legend>
-      <video-publisher width="360px" height="240px" #publisher [session]="session" [token]="token"></video-publisher>
+      <video-publisher #publisher [session]="session" [token]="token"></video-publisher>
     </fieldset>
     <button type="button" (click)="toggleVideo()">toggle Video</button>
     <button type="button" (click)="toggleAudio()">toggle Audio</button>
@@ -14,7 +14,7 @@
   <section id="subscribers-container">
     <fieldset>
       <legend>Subscribers</legend>
-      <video-subscribers width="360px" height="240px" #subscribers [session]="session" [token]="token"></video-subscribers>
+      <video-subscribers #subscribers [session]="session" [token]="token"></video-subscribers>
     </fieldset>
   </section>
 </div>

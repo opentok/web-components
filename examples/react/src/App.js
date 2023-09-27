@@ -31,9 +31,16 @@ function App() {
     // Initialize an OpenTok Session object
     const session = OT.initSession(apiKey, sessionId);
 
-    // Set session and token for Web Components
+    // Set session and token (and optionally properties) for Web Components
     publisher.current.session = session;
     publisher.current.token = token;
+    publisher.current.properties = {
+      fitMode: 'cover',
+      height: '100%',
+      resolution: '1920x1080',
+      videoContentHint: 'detail',
+      width: '100%',
+    };
     subscribers.current.session = session;
     subscribers.current.token = token;
     screenshare.current.session = session;
@@ -50,7 +57,7 @@ function App() {
         <section className="App-section-publisher">
           <fieldset>
             <legend>Publisher</legend>
-            <video-publisher width="360px" height="240px" ref={publisher}></video-publisher>
+            <video-publisher ref={publisher}></video-publisher>
           </fieldset>
           <button onClick={toggleVideo}>
               toggle Video
@@ -64,7 +71,7 @@ function App() {
         <section className="App-section-subscribers">
           <fieldset>
             <legend>Subscribers</legend>
-            <video-subscribers width="360px" height="240px" ref={subscribers}></video-subscribers>
+            <video-subscribers ref={subscribers}></video-subscribers>
           </fieldset>
         </section>
       </div>

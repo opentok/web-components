@@ -4,7 +4,7 @@
   <section id="publisher-container">
     <fieldset>
       <legend>Publisher</legend>
-      <video-publisher #publisher [session]="session" [token]="token"></video-publisher>
+      <video-publisher #publisher [session]="session" [token]="token" [properties]="pubProperties"></video-publisher>
     </fieldset>
     <button type="button" (click)="toggleVideo()">toggle Video</button>
     <button type="button" (click)="toggleAudio()">toggle Audio</button>
